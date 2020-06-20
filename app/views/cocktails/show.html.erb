@@ -1,4 +1,8 @@
-<h1> <%= @cocktail.name %> </h1>
+<div class="d-flex" style="align-items: baseline">
+  <h1> <%= @cocktail.name %> </h1>
+  <i class="fas fa-cocktail ml-2"></i>
+</div>
+
 <hr>
 <h2>Ingredients</h2>
 
@@ -12,4 +16,5 @@
      list of ingredients
      nested form to add doses -->
 <hr>
-<%= link_to "⟲ Back to Cocktails", cocktails_path %>
+<%= link_to "⟲ Back to Cocktails", cocktails_path %> |
+<%= link_to "+ Add new dose", new_cocktail_dose_path(@cocktail) %>

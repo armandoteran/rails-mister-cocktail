@@ -11,7 +11,7 @@ Cocktail.destroy_all
 puts 'database is clean'
 puts 'creating cocktails'
 Cocktail.create!(
-  name: "Daiquiri",
+  name: 'Daiquiri'
 )
 puts 'cocktails created'
 
@@ -19,7 +19,12 @@ puts 'deleting ingredients'
 Ingredient.destroy_all
 puts 'database is clean'
 puts 'creating ingredients'
-Ingredient.create!(
-  name: "rum",
-)
+
+Ingredient.create!(name: 'white rum')
+Ingredient.create!(name: 'sugar')
+Ingredient.create!(name: 'lime')
+Ingredient.create!(name: 'mint leaves')
+Ingredient.create!(name: 'club soda')
+Ingredient.create!(name: 'ice cubes')
+
 puts 'ingredients created'
