@@ -1,7 +1,4 @@
-const { environment } = require('@rails/webpacker')
-
-module.exports = environment
-
+// Import Boostrap JS library
 const { environment } = require('@rails/webpacker')
 
 // Dependencies

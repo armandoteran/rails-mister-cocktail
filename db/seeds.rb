@@ -6,8 +6,20 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-puts 'creating seeds'
-Ingredient.create(name: "lemon")
-Ingredient.create(name: "ice")
-Ingredient.create(name: "mint leaves")
-puts 'done'
+puts 'deleting cocktails'
+Cocktail.destroy_all
+puts 'database is clean'
+puts 'creating cocktails'
+Cocktail.create!(
+  name: "Daiquiri",
+)
+puts 'cocktails created'
+
+puts 'deleting ingredients'
+Ingredient.destroy_all
+puts 'database is clean'
+puts 'creating ingredients'
+Ingredient.create!(
+  name: "rum",
+)
+puts 'ingredients created'
