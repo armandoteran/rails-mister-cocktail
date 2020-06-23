@@ -1,13 +1,16 @@
-<div class="d-flex" style="align-items: baseline">
-  <h1>Create a cocktail</h1>
-  <i class="fas fa-cocktail ml-2"></i>
+<div class="container mt-3">
+  <div class="d-flex" style="align-items: baseline">
+    <h1>Create a cocktail</h1>
+    <i class="fas fa-cocktail ml-2"></i>
+  </div>
+
+  <hr>
+  <%= simple_form_for @cocktail do |f| %>
+    <%= f.input :name, placeholder: 'Mojito' %>
+    <%= f.submit class:'btn btn-primary' %>
+  <% end %>
+
+  <hr>
+  <%= link_to "⟲ Back to Cocktails", cocktails_path %>
+
 </div>
-
-<hr>
-<%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name, placeholder: 'Mojito' %>
-  <%= f.submit class:'btn btn-primary' %>
-<% end %>
-
-<hr>
-<%= link_to "⟲ Back to Cocktails", cocktails_path %>

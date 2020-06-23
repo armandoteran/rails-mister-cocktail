@@ -1,25 +1,27 @@
-<div class="d-flex" style="align-items: baseline">
-  <h1> <%= @cocktail.name %> </h1>
-  <i class="fas fa-cocktail ml-2"></i>
-</div>
+<div class="container mt-3">
+  <div class="d-flex" style="align-items: baseline">
+    <h1> <%= @cocktail.name %> </h1>
+    <i class="fas fa-cocktail ml-2"></i>
+  </div>
 
-<hr>
-<h2>Ingredients</h2>
+  <hr>
+  <h2>Ingredients</h2>
 
-<ul>
-  <% @cocktail.doses.each do |dose| %>
-    <li><%= dose.description %> <%= dose.ingredient.name %> </li>
+  <ul>
+    <% @cocktail.doses.each do |dose| %>
 
-    <%= link_to dose_path(dose), method: :delete, class: "text-info", data: { confirm: 'Are you sure?'} do %>
-      <i class="fa fa-trash"></i>
+      <div class="d-flex">
+        <li><%= dose.description %> <%= dose.ingredient.name %> </li>
+        <%= link_to dose_path(dose), method: :delete, class: "text-info", data: { confirm: 'Are you sure?'} do %>
+          <i class="fa fa-trash ml-3"></i>
+        <% end %>
+      </div>
+
     <% end %>
+  </ul>
 
-  <% end %>
-</ul>
+  <hr>
+  <%= link_to "⟲ Back to Cocktails", cocktails_path %> |
+  <%= link_to "+ Add new dose", new_cocktail_dose_path(@cocktail) %> |
 
-<!-- cocktail name
-     list of ingredients
-     nested form to add doses -->
-<hr>
-<%= link_to "⟲ Back to Cocktails", cocktails_path %> |
-<%= link_to "+ Add new dose", new_cocktail_dose_path(@cocktail) %> |
+</div>
