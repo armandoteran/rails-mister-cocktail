@@ -9,6 +9,11 @@
 <ul>
   <% @cocktail.doses.each do |dose| %>
     <li><%= dose.description %> <%= dose.ingredient.name %> </li>
+
+    <%= link_to dose_path(dose), method: :delete, class: "text-info", data: { confirm: 'Are you sure?'} do %>
+      <i class="fa fa-trash"></i>
+    <% end %>
+
   <% end %>
 </ul>
 
