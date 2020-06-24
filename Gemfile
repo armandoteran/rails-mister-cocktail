@@ -54,3 +54,6 @@ gem 'simple_form'
 
 # Hide key
 gem 'dotenv-rails', groups: [:development, :test]
+
+# Gemfile
+gem 'cloudinary', '~> 1.12.0'

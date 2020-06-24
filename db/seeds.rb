@@ -20,11 +20,19 @@ Ingredient.destroy_all
 puts 'database is clean'
 puts 'creating ingredients'
 
-Ingredient.create!(name: 'white rum')
-Ingredient.create!(name: 'sugar')
-Ingredient.create!(name: 'lime')
-Ingredient.create!(name: 'mint leaves')
-Ingredient.create!(name: 'club soda')
-Ingredient.create!(name: 'ice cubes')
+Ingredient.create!(name: 'White rum')
+Ingredient.create!(name: 'Sugar')
+Ingredient.create!(name: 'Lime wheel')
+Ingredient.create!(name: 'Mint leaves')
+Ingredient.create!(name: 'Club soda')
+Ingredient.create!(name: 'Ice cubes')
+Ingredient.create!(name: 'Freshly-squeezed lime juice')
+Ingredient.create!(name: 'Tequila')
+Ingredient.create!(name: 'Orange liqueur')
+Ingredient.create!(name: 'Agave syrup')
+Ingredient.create!(name: 'Kosher salt')
+Ingredient.create!(name: 'Demerara sugar syrup')
+Ingredient.create!(name: 'Mint spig')
+Ingredient.create!(name: 'Simple syrup')
 
 puts 'ingredients created'
