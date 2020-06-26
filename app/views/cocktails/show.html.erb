@@ -1,14 +1,19 @@
 <div class="container mt-3">
 
-<div class="card-product">
-  <%= cl_image_tag @cocktail.photo.key, width: 400, height: 300, crop: :fill %>
-  <div class="card-product-infos">
-    <h1> <%= @cocktail.name %> </h1>
+<div class="links mb-3">
+  <%= link_to "⟲ Back to Cocktails", cocktails_path %> |
+  <%= link_to "+ Add new dose", new_cocktail_dose_path(@cocktail) %> |
+</div>
+
+<div class="card-product-show" style="background-image: url('<%= cl_image_path @cocktail.photo.key, width: 0.6, height: 0.4, crop: :fill%>')">
+
+  <div class="card-product-infos ml-3">
+    <h1 class="info-text"> <%= @cocktail.name %> </h1>
     <ul>
     <% @cocktail.doses.each do |dose| %>
 
       <div class="d-flex">
-        <li><%= dose.description %> <%= dose.ingredient.name %> </li>
+        <li class="info-text"><%= dose.description %> <%= dose.ingredient.name %> </li>
         <%= link_to dose_path(dose), method: :delete, class: "text-info", data: { confirm: 'Are you sure?'} do %>
           <i class="fa fa-trash ml-3"></i>
         <% end %>
@@ -18,11 +23,6 @@
   </ul>
 
   </div>
-</div>
-
-<div class="links mt-3">
-  <%= link_to "⟲ Back to Cocktails", cocktails_path %> |
-  <%= link_to "+ Add new dose", new_cocktail_dose_path(@cocktail) %> |
 </div>
 
 </div>
