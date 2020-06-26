@@ -7,8 +7,8 @@
 
 <div class="card-product-show" style="background-image: url('<%= cl_image_path @cocktail.photo.key, width: 0.6, height: 0.4, crop: :fill%>')">
 
-  <div class="card-product-infos ml-3">
-    <h1 class="info-text"> <%= @cocktail.name %> </h1>
+  <div class="card-product-infos">
+    <h1 class="info-text mt-3"> <%= @cocktail.name %> </h1>
     <ul>
     <% @cocktail.doses.each do |dose| %>
 

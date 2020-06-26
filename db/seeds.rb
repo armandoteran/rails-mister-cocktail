@@ -14,7 +14,7 @@ puts 'database is clean'
 
 puts 'creating daiquiri'
 daiquiri = Cocktail.create!(name: 'Daiquiri')
-file = URI.open('https://images.unsplash.com/photo-1558950334-8d04704332f8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')
+file = URI.open('https://images.unsplash.com/photo-1558383409-ab7ef8db3e01?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1070&q=80')
 daiquiri.photo.attach(
   io: file, filename: 'daiquiri.jpeg', content_type: 'image/jpeg'
 )

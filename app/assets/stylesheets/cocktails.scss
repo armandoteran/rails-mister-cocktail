@@ -5,7 +5,6 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  align-items: center;
   border-radius: 30px;
   margin: auto;
 }
@@ -13,11 +12,10 @@
 .card-product-show {
   overflow: hidden;
   width: 50%;
-  height: 50%;
+  height: 250px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  align-items: center;
-  border-radius: 30px;
+  border-radius: 80px;
   margin: auto;
 }
 
@@ -40,6 +38,10 @@
   margin-top: 8px;
 }
 
+.card-product-infos {
+  padding: 20px;
+}
+
 .card-product .card-product-infos {
   padding: 16px;
 }
@@ -53,11 +55,10 @@
   box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
 
-
 .info-text {
   text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;
   color: white;
-  font: 1.5em Georgia, "Bitstream Charter", "URW Bookman L", "Century Schoolbook L", serif;
+  font: 1em arial, serif;
 }
 
 ul {
